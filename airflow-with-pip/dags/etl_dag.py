@@ -105,7 +105,6 @@ with (DAG(
     conn_id=CONN_ID,
     database=DATABASE,
     sql="""{{ ti.xcom_pull(task_ids='prepare_insert_query') }}""",
-    trigger_rule="all_done",
   )
 
   top_profitable_movies >> transform >> drop_table >> create_table >> prepare_insert_query >> insert_movies
