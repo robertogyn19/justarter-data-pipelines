@@ -13,7 +13,7 @@ $ docker run --name postgres --publish 5432:5432 -e POSTGRES_PASSWORD=postgres -
 525dbadac19d0eec24e82f1320744725fa2539b6c910f7f04b53ef0eb1d990f1
 
 # download do backup da base de dados
-$ wget -qO- omdb.dump https://github.com/credativ/omdb-postgresql/releases/download/2022-10-18/omdb.dump
+$ wget https://github.com/credativ/omdb-postgresql/releases/download/2022-10-18/omdb.dump
 
 # Restauração do backup (observe que na saída é esperado um o erro do schema public já existente)
 $ docker exec -i postgres pg_restore -U postgres -d postgres < omdb.dump
