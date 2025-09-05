@@ -3,7 +3,7 @@ from airflow.models.dag import DAG
 from airflow.operators.python import PythonOperator
 from airflow.providers.postgres.operators.postgres import SQLExecuteQueryOperator
 
-CONN_ID = "postgres_default"
+CONN_ID = "omdb_postgres"
 DATABASE = "omdb"
 TABLE_NAME = "public.top_profitable_movies"
 
@@ -11,7 +11,7 @@ with (DAG(
   dag_id="etl_dag",
   default_args={
     "owner": "airflow",
-    "start_date": "2021-01-01",
+    "start_date": "2025-09-01",
     "retries": 1,
   },
   schedule_interval="@daily",
