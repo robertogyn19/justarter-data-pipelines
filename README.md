@@ -19,8 +19,8 @@ a [documentação oficial](https://airflow.apache.org/docs/apache-airflow/stable
 python -m venv .venv
 
 # Instalação
-pip install "apache-airflow[celery]==2.10.1" \
-  --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.10.1/constraints-3.12.txt"
+pip install "apache-airflow[celery]==2.11.0" \
+  --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.11.0/constraints-3.12.txt"
 ```
 
 Após a instalação, ainda é necessário realizar o bootstrap do Airflow.

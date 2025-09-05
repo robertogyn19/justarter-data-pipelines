@@ -11,7 +11,7 @@ with (DAG(
   dag_id="etl_dag",
   default_args={
     "owner": "airflow",
-    "start_date": "2021-01-01",
+    "start_date": "2025-09-01",
     "retries": 1,
   },
   schedule_interval="@daily",
