@@ -174,8 +174,7 @@ Preencha os campos conforme abaixo:
 
 - Conn Id: `omdb_postgres`
 - Conn Type: `Postgres`
-- Host: `host.docker.internal` (se estiver utilizando o docker-compose ou Astro CLI no Windows ou macOS, caso contrário
-  utilize `localhost`)
+- Host: `<IP local, ex: 192.168.15.2>`
 - Database: `omdb`
 - Port: `5432`
 - Login: `postgres`
@@ -183,6 +182,9 @@ Preencha os campos conforme abaixo:
 - Extra: `{"ssl_mode": "disable"}`
 
 Clique em `Save` para salvar a conexão.
+
+O host configurado na conexão deve ser acessível a partir do ambiente onde o Airflow está rodando.
+Execute o comando `ifconfig` (Mac), `ip a s` (Linux) ou `ipconfig` (Windows) para descobrir o IP local da sua máquina.
 
 ## 5. DAGs
 
